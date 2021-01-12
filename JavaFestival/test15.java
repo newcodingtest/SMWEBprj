@@ -4,18 +4,20 @@ public class test15 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥ : ");
 		int num = sc.nextInt();
 		
-		// Ãâ·Â°ª
+		// ì¶œë ¥ê°’
 		int sum = 1;
 		
-		// Áõ°¡°ª ÀúÀå
+		// ì¦ê°€ê°’ ì €ì¥
 		int count = 0;
 		
-		// num±îÁö ¹İº¹
+		// numê¹Œì§€ ë°˜ë³µ
 		for (int i = 0; i < num; i++) {
 			System.out.print((sum += count++) + " ");
 		}
+		sc.close();
+
 	}
 }
