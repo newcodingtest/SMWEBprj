@@ -4,21 +4,21 @@ public class test25 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// ¹è¿­¿¡ °¢ ¼ýÀÚ¸¶´Ù ÇÊ¿äÇÑ ´ë½Ã'_'¹®ÀÚÀÇ °³¼ö ÀúÀå
-		// 0ºÎÅÍ 9±îÁö ¼ø¼­´ë·Î ÀúÀåµÊ
+		// ë°°ì—´ì— ê° ìˆ«ìžë§ˆë‹¤ í•„ìš”í•œ ëŒ€ì‹œ'_'ë¬¸ìžì˜ ê°œìˆ˜ ì €ìž¥
+		// 0ë¶€í„° 9ê¹Œì§€ ìˆœì„œëŒ€ë¡œ ì €ìž¥ë¨
 		int[] num_count = { 6, 2, 5, 5, 4, 5, 6, 3, 7, 6 };
 
-		// ¼ýÀÚ ¹®¿­·Î ÀÔ·Â
-		System.out.print("Ã¹ÀÚ¸® 0À» Á¦¿ÜÇÑ ¼ýÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä >> ");
+		// ìˆ«ìž ë¬¸ì—´ë¡œ ìž…ë ¥
+		System.out.print("ì²«ìžë¦¬ 0ì„ ì œì™¸í•œ ìˆ«ìžë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš” >> ");
 		String key_input = sc.next();
 
-		// Ãâ·Â°ª
+		// ì¶œë ¥ê°’
 		int sum = 0;
 
-		// for¹®°ú swich¹®À» ÀÌ¿ëÇÏ¿© Ä«¿îÆ®
+		// forë¬¸ê³¼ swichë¬¸ì„ ì´ìš©í•˜ì—¬ ì¹´ìš´íŠ¸
 		for (int i = 0; i < key_input.length(); i++) {
-			// charAt(index) > ¹®ÀÚ¿­¿¡¼­ ÀÎµ¦½º¿¡ ÇØ´çÇÏ´Â ¹®ÀÚ¸¦ charÇüÀ¸·Î ¹ÝÈ¯
-			// char¸¦ ¾Æ½ºÅ°ÄÚµå·Î ¹Ù²Ù°Ô µÇ¸é 0 = 48 ÀÌ´Ï ¼öÁ¤ÇØÁÜ
+			// charAt(index) > ë¬¸ìžì—´ì—ì„œ ì¸ë±ìŠ¤ì— í•´ë‹¹í•˜ëŠ” ë¬¸ìžë¥¼ charí˜•ìœ¼ë¡œ ë°˜í™˜
+			// charë¥¼ ì•„ìŠ¤í‚¤ì½”ë“œë¡œ ë°”ê¾¸ê²Œ ë˜ë©´ 0 = 48 ì´ë‹ˆ ìˆ˜ì •í•´ì¤Œ
 			int val = key_input.charAt(i) - 48;
 			for (int j = 0; j < 10; j++) {
 				if (val == j) {
@@ -26,6 +26,9 @@ public class test25 {
 				}
 			} // end for
 		} // end for
-		System.out.println("´ë½Ã'_'ÀÇ ÃÑ ÇÕ >> " + sum);
+		System.out.println("ëŒ€ì‹œ'_'ì˜ ì´ í•© >> " + sum);
+		
+		sc.close();
 	}
 }
+
