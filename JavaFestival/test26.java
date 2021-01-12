@@ -1,29 +1,33 @@
 import java.util.Scanner;
 
 public class test26 {
+	static StringBuilder SB = new StringBuilder();
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// ¹è¿­¿¡ °¢ ¼ıÀÚ¸¶´Ù ÇÊ¿äÇÑ ´ë½Ã'_'¹®ÀÚÀÇ °³¼ö ÀúÀå
-		// 0ºÎÅÍ 9±îÁö ¼ø¼­´ë·Î ÀúÀåµÊ
-		System.out.print("ÇÔÈ£È­ÇÒ ¹®ÀåÀ» ÀÔ·Â : ");
+		// ë°°ì—´ì— ê° ìˆ«ìë§ˆë‹¤ í•„ìš”í•œ ëŒ€ì‹œ'_'ë¬¸ìì˜ ê°œìˆ˜ ì €ì¥
+		// 0ë¶€í„° 9ê¹Œì§€ ìˆœì„œëŒ€ë¡œ ì €ì¥ë¨
+		System.out.print("í•¨í˜¸í™”í•  ë¬¸ì¥ì„ ì…ë ¥ : ");
 		String string = sc.next();
-		System.out.print("¹®ÀÚ °Å¸®À» ÀÔ·Â : ");
+		System.out.print("ë¬¸ì ê±°ë¦¬ì„ ì…ë ¥ : ");
 		int num = sc.nextInt();
-		
-		//¹ŞÀº 
+
+		System.out.println(ceasar(string, num));
+
+		sc.close();
+	}
+
+	public static StringBuilder ceasar(String string, int num) {
+		// ë°›ì€
 		for (int i = 0; i < string.length(); i++) {
 			int string_char = string.charAt(i);
-			//´ë¹®ÀÚ(65~90), ¼Ò¹®ÀÚ(97~122)
-			if (string_char > ) {
-				
-			} else {
-
+			string_char += num;
+			if (string_char > 90 || string_char > 122) {
+				string_char -= 26;
 			}
-			System.out.println(string_char);
+			SB.append((char) string_char);
 		}
-		
-
-
+		return SB;
 	}
 }
