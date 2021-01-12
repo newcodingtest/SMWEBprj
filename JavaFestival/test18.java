@@ -4,30 +4,30 @@ public class test18 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// Á¤¼ö ÀÔ·Â
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		// ì •ìˆ˜ ì…ë ¥
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥ : ");
 		int num = sc.nextInt();
 		int[][] num_list = new int[num][num];
 
-		// Áõ°¡°ª ÀúÀå º¯¼ö
+		// ì¦ê°€ê°’ ì €ì¥ ë³€ìˆ˜
 		int count = 1;
 
-		// ¹è¿­¿¡ ÀúÀå
+		// ë°°ì—´ì— ì €ì¥
 		for (int i = 0; i < num_list.length; i++) {
 			if (i % 2 == 0) {
-				//Â¦¼ö¹øÂ° ÇàÀº ¾Õ¿¡¼­ ºÎÅÍ Áõ°¡
+				//ì§ìˆ˜ë²ˆì§¸ í–‰ì€ ì•ì—ì„œ ë¶€í„° ì¦ê°€
 				for (int j = 0; j < num_list[i].length; j++) {
 					num_list[i][j] = count++;
 				}
 			} else {
-				//È¦¼ö¹øÂ° ÇàÀº µÚ¿¡¼­ ºÎÅÍ Áõ°¡
+				//í™€ìˆ˜ë²ˆì§¸ í–‰ì€ ë’¤ì—ì„œ ë¶€í„° ì¦ê°€
 				for (int j = num_list[i].length - 1; j >= 0; j--) {
 					num_list[i][j] = count++;
 				}
 			} // end if
 		} // end for i
 
-		//¹è¿­ Ãâ·Â
+		//ë°°ì—´ ì¶œë ¥
 		for (int i = 0; i < num_list.length; i++) {
 			for (int j = 0; j < num_list[i].length; j++) {
 				System.out.print(num_list[i][j] + "\t");
@@ -35,5 +35,6 @@ public class test18 {
 			}//end for j
 			System.out.println();
 		}//end for i
+		sc.close();
 	}
 }
