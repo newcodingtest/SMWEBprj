@@ -1,23 +1,34 @@
 import java.util.Scanner;
 
 public class test16 {
+	static StringBuilder result = new StringBuilder(); 
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// ¹®ÀÚ¿­ ÀÔ·Â
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		// ë¬¸ìì—´ ì…ë ¥
+		System.out.print("ë¬¸ìì—´ ì…ë ¥ : ");
 		String key_input = sc.next();
 
-		// ÀÔ·Â¹ŞÀ» ¹®ÀÚ¿­À» ÇÏ³ª¾¿ ÀúÀåÇÒ byte ¹è¿­»ı¼º
+		// ì •ë ¹ëœ ìˆ«ìë¥¼ ì´ìš©í•˜ì—¬ ë‹¤ì‹œ byte(ì•„ìŠ¤í‚¤ì½”ë“œ) > char(ë¬¸ì)ë¡œ ë³€í™˜í•˜ì—¬ ì¶œë ¥
+
+		System.out.print(reverseStr(key_input));
+		
+		sc.close();
+	}
+
+	public static StringBuilder reverseStr(String key_input) {
+
+		// ì…ë ¥ë°›ì„ ë¬¸ìì—´ì„ í•˜ë‚˜ì”© ì €ì¥í•  byte ë°°ì—´ìƒì„±
 		byte[] key_input_list = new byte[key_input.length()];
 
-		// charAt()¸¦ ÀÌ¿ëÇØ¼­ ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­À» charÇüÀ¸·Î º¯È¯
-		// char¸¦ byte·Î º¯È¯ÇÏ¸é ¾Æ½ºÅ°ÄÚµå ¹øÈ£¸¦ ¾òÀ»¼ö ÀÖÀ½ ´ë¹®ÀÚ(65 ~ 90), ¼Ò¹®ÀÚ (97 ~ 122)
+		// charAt()ë¥¼ ì´ìš©í•´ì„œ ì…ë ¥ë°›ì€ ë¬¸ìì—´ì„ charí˜•ìœ¼ë¡œ ë³€í™˜
+		// charë¥¼ byteë¡œ ë³€í™˜í•˜ë©´ ì•„ìŠ¤í‚¤ì½”ë“œ ë²ˆí˜¸ë¥¼ ì–»ì„ìˆ˜ ìˆìŒ ëŒ€ë¬¸ì(65 ~ 90), ì†Œë¬¸ì (97 ~ 122)
 		for (int i = 0; i < key_input.length(); i++) {
 			key_input_list[i] = (byte) key_input.charAt(i);
 		}
 
-		// ÀÌ¸¦ ÀÌ¿ëÇÏ¿© ¹è¿­¿¡ ¼ıÀÚ Á¤·Ä ÄÚµå ÀÛ¼º
+		// ì´ë¥¼ ì´ìš©í•˜ì—¬ ë°°ì—´ì— ìˆ«ì ì •ë ¬ ì½”ë“œ ì‘ì„±
 		for (int t = 0; t < key_input.length() - 1; t++) {
 			for (int i = t + 1; i < key_input_list.length; i++) {
 				if (key_input_list[t] > key_input_list[i]) {
@@ -28,9 +39,11 @@ public class test16 {
 			} // end for
 		} // end for
 
-		// Á¤·ÉµÈ ¼ıÀÚ¸¦ ÀÌ¿ëÇÏ¿© ´Ù½Ã byte(¾Æ½ºÅ°ÄÚµå) > char(¹®ÀÚ)·Î º¯È¯ÇÏ¿© Ãâ·Â
-		for (int i = 0; i < key_input.length(); i++) {
-			System.out.print((char) key_input_list[i]);
+		//StringBuilderì¸ resultì— ì°¨ê·¼ì°¨ê·¼ ì €ì¥í•˜ì—¬ ë¦¬í„´
+		for (int i = 0; i < key_input_list.length; i++) {
+			result.append((char)key_input_list[i]);
 		}
+		return result;
 	}
+	
 }
