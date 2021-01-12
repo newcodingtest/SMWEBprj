@@ -4,14 +4,14 @@ public class test22 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// Á¤¼ö ÀÔ·Â
+		// ì •ìˆ˜ ìž…ë ¥
 		int num_list[] = new int[5];
 		for (int i = 0; i < 5; i++) {
-			System.out.print((i + 1) + "¹øÂ° ¼ö ÀÔ·Â :");
+			System.out.print((i + 1) + "ë²ˆì§¸ ìˆ˜ ìž…ë ¥ :");
 			num_list[i] = sc.nextInt();
 		}
 
-		// Çà°ú ·ÄÀ» ±âÁØÀ¸·Î ¼­·Î¿¡ °Å¸®°ªÀ» ±â·Ï
+		// í–‰ê³¼ ë ¬ì„ ê¸°ì¤€ìœ¼ë¡œ ì„œë¡œì— ê±°ë¦¬ê°’ì„ ê¸°ë¡
 		for (int i = 0; i < num_list.length; i++) {
 			for (int j = i; j < num_list.length; j++) {
 				if (num_list[i] > num_list[j]) {
@@ -22,5 +22,6 @@ public class test22 {
 			} // end for
 			System.out.print(num_list[i] + "\t");
 		} // end for
+		sc.close();
 	}
 }
