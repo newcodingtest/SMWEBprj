@@ -4,14 +4,14 @@ public class test13 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		System.out.print("ì •ìˆ˜ë¥¼ ìž…ë ¥ : ");
 		int num = sc.nextInt();
 		
-		// ÇÇº¸³ªÄ¡ ¼ö¿­ ÇÕ
+		// í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ í•©
 		int back = 0;
 		int front = 1;
 		
-		// num±îÁö ¹Ýº¹
+		// numê¹Œì§€ ë°˜ë³µ
 		for (int i = 0; i < num; i++) {
 			if (i == 1 ) {
 				front = 1;
@@ -21,5 +21,6 @@ public class test13 {
 			}
 			System.out.println(front);
 		}
+		sc.close();
 	}
 }
