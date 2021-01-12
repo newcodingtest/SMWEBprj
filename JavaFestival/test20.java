@@ -5,27 +5,27 @@ public class test20 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// Á¤¼ö ÀÔ·Â
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		// ì •ìˆ˜ ì…ë ¥
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥ : ");
 		int num = sc.nextInt();
 		System.out.print(num + " = ");
 
-		// 2Áø¼ö ÀúÀåÇÒ ¹è¿­ »ı¼º
+		// 2ì§„ìˆ˜ ì €ì¥í•  ë°°ì—´ ìƒì„±
 		ArrayList<Integer> num_array = new ArrayList<Integer>();
 
-		// while Á¶°Ç º¯¼ö
+		// while ì¡°ê±´ ë³€ìˆ˜
 		boolean set = true;
 
-		// 2Áø¼ö º¯È¯ÇÏ¿© ¹è¿­¿¡ ÀúÀå
+		// 2ì§„ìˆ˜ ë³€í™˜í•˜ì—¬ ë°°ì—´ì— ì €ì¥
 		while (set) {
-			// 2·Î ³ª´« ³ª¸ÓÁö¸¦ ¹è¿­¿¡ ÀÔ·Â
+			// 2ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ë¥¼ ë°°ì—´ì— ì…ë ¥
 			if (num % 2 == 0) {
 				num_array.add(0);
 			} else {
 				num_array.add(1);
 			}
 
-			// ´õÀÌ»ó 2·Î ³ª´²ÁöÁö ¾Ê´Â Á¶°Ç
+			// ë”ì´ìƒ 2ë¡œ ë‚˜ëˆ ì§€ì§€ ì•ŠëŠ” ì¡°ê±´
 			if (num / 2 == 1) {
 				num_array.add(1);
 				set = false;
@@ -36,10 +36,11 @@ public class test20 {
 			num /= 2;
 		} // end for
 
-		// 2Áø¼ö Ãâ·Â
+		// 2ì§„ìˆ˜ ì¶œë ¥
 		for (int i = num_array.size() - 1; i >= 0; i--) {
 			System.out.print(num_array.get(i) + " ");
 		}
-		
+		sc.close();
 	}
 }
+
