@@ -4,15 +4,15 @@ public class test19 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		// Á¤¼ö ÀÔ·Â
-		System.out.print("Á¤¼ö¸¦ ÀÔ·Â : ");
+		// ì •ìˆ˜ ìž…ë ¥
+		System.out.print("ì •ìˆ˜ë¥¼ ìž…ë ¥ : ");
 		int num = sc.nextInt();
 		System.out.print(num + " = ");
 
-		// ¾à¼ö
+		// ì•½ìˆ˜
 		int count = 2;
 
-		// whileÁ¶°Ç
+		// whileì¡°ê±´
 		boolean while_set = true;
 
 		while (while_set) {
@@ -31,6 +31,7 @@ public class test19 {
 				count++;
 			}
 		}//end while
+		sc.close();
 		
 	}
 }
