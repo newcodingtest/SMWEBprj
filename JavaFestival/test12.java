@@ -4,23 +4,23 @@ public class test12 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		System.out.print("¹è¿­ÀÇ Å©±â¸¦ Á¤ÇÏ´Â Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+		System.out.print("ë°°ì—´ì˜ í¬ê¸°ë¥¼ ì •í•˜ëŠ” ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 		int num = sc.nextInt();
 
-		// ´ëÀÔ°ª
+		// ëŒ€ì…ê°’
 		int count = 1;
 
-		// 2Â÷¿ø ¹è¿­ »ı¼º
+		// 2ì°¨ì› ë°°ì—´ ìƒì„±
 		int[][] array = new int[num][num];
 
-		// ¹è¿­¿¡ Áı¾î ³Ö´Â for¹®
+		// ë°°ì—´ì— ì§‘ì–´ ë„£ëŠ” forë¬¸
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
 				array[j][i] = count++;
 			}
 		}
 
-		// Ãâ·ÂÇÏ´Â for¹®
+		// ì¶œë ¥í•˜ëŠ” forë¬¸
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array[i].length; j++) {
 				System.out.print(array[i][j] + "\t");
@@ -28,5 +28,7 @@ public class test12 {
 			System.out.println();
 		}
 
+		sc.close();
 	}
+
 }
